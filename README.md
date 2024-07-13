@@ -1,6 +1,6 @@
 # Projec-crush
 
-Um mini site criado para expressar sentimentos de forma criativa e carinhosa, utilizando HTML, CSS e JavaScript.
+Um mini site criado para expressar sentimentos de forma criativa, utilizando HTML, CSS e JavaScript.
 
 ## Estrutura do Projeto
 
