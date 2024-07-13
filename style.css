@@ -1,0 +1,58 @@
+/* Definição da codificação UTF-8 */
+@charset "utf-8";
+
+/* Estilos para o corpo da página */
+body {
+    background-image: linear-gradient(to right, red, FireBrick, DarkRed);
+    font-family: 'Cooper Black', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ajusta a altura para ocupar toda a tela vertical */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para a seção principal */
+main {
+    background-color: white;
+    width: 80%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgb(145, 15, 60);
+    text-align: center;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 1px;
+}
+
+/* Estilos para os títulos */
+h1 {
+    font-family: 'Great Vibes', cursive; /* Fonte romântica para o título */
+    color: DarkRed; /* Tom de vermelho escuro */
+}
+
+/* Ajuste para o parágrafo */
+p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+    line-height: 0.8; /* Ajusta o espaçamento entre linhas dentro do parágrafo */
+    white-space: pre-line; /* Mantém a formatação do texto como no código-fonte */
+}
+
+/* Estilos para a div do quiz */
+.quiz-container {
+    background-color: FireBrick;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 18px;
+}
