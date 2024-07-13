@@ -2,25 +2,60 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Projec-crush</title>
+    <title>Projec-crush - Resultado</title>
     <style>
         body {
-            background-color: black; /* Define o fundo como vermelho */
+            background-color: red; /* Fundo vermelho */
+            color: white;
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center; /* Centraliza o conteúdo horizontalmente */
-            align-items: center; /* Centraliza o conteúdo verticalmente */
-            height: 100vh; /* Altura igual à altura da viewport */
-            margin: 0; /* Remove margens padrão */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
         main {
-            text-align: center; /* Centraliza o conteúdo dentro de <main> */
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #FFD700; /* Dourado para o título */
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: #FFFFFF; /* Branco para o texto */
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #1E90FF; /* Azul claro para o botão */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #00BFFF; /* Azul mais claro para o botão ao passar o mouse */
         }
     </style>
 </head>
 <body>
     <main>
-        <img src="yes.gif" alt="" width="300" height="300">
+        <h1>Sim! 🎉</h1>
+        <p>Você aceitou! Estou muito feliz! Vamos embarcar nessa aventura juntos.</p>
+        <img src="yes.gif" alt="Imagem de confirmação" width="300" height="300">
+        <br>
+        <a href="index.html" class="btn">Voltar à Página Inicial</a>
     </main>
 </body>
 </html>
