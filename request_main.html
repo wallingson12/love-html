@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado do Quiz</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top, rgb(117, 7, 7), FireBrick, rgb(231, 68, 68));
+            font-family: 'Cooper Black', sans-serif;
+            font-size: 1em;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Cor do texto */
+        }
+        
+        main {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        
+        .quiz-container {
+            background-color: rgba(207, 37, 37, 0.8); /* Fundo semi-transparente */
+            padding: 1em;
+            border-radius: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.3em 0; /* Reduzindo o espaçamento interno */
+    font-size: 0.8em; /* Reduzindo o tamanho da fonte */
+}
+        
+        /* Estilo para o botão de enviar */
+        button[type="submit"] {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #e33b3b; /* Cor de fundo ao passar o mouse */
+        }
+        
+        /* Estilo para as perguntas */
+        .question {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/love.jpg" alt="" width="100" height="100">
+    <br>
+    <main>
+        <section class="intro">
+            <h1>Olá querida!</h1>
+            <p>Eu não sou de falar muito, então prefiro me expressar de outras maneiras...<br>
+            Como passar tempo criando algo, desenhando, escrevendo ou programando.<br>
+            Este mini site é uma forma de dizer...<br> 
+            <p>Você é a variável constante do meu script! &#10084;&#65039;&#65039;</p>
+        </section>
+    </main>
+    <div class="quiz-container">
+        <h2>Quer namorar comigo?</h2>
+        <form id="quizForm" action="erro.html" method="get" onsubmit="return validarFormulario()">
+            <div class="question">
+                <label><input type="radio" name="q1" value="a"> Sim</label><br>
+                <label><input type="radio" name="q1" value="b"> Não</label><br>
+            </div>
+            <button type="submit">Enviar Resposta</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Wallingson</p>
+    </footer>
+    <script>
+        function validarFormulario() {
+            const resposta = document.querySelector('input[name="q1"]:checked');
+            
+            if (resposta && resposta.value === 'a') {
+                alert('Error 404');
+                return true; // Permite o envio do formulário
+            } else {
+                alert('Que pena! Espero que possamos continuar amigos.');
+                return false; // Impede o envio do formulário
+            }
+        }
+    </script>
+</body>
+</html>

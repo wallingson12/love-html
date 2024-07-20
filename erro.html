@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro 404 - Página Não Encontrada</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Cor de fundo preta, para caso a imagem não cubra toda a tela */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh; /* Ajuste para preencher a altura total da janela */
+            background-image: url('imagens/caminho_secreto.jpg'); /* Substitua pelo caminho da imagem */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: #fff; /* Cor do texto */
+            font-family: Arial, sans-serif; /* Fonte do texto */
+        }
+        .link1 {
+            position: absolute;
+            top: 35%; /* Ajuste a posição vertical para mais abaixo */
+            left: 12%; /* Ajuste a posição horizontal */
+        }
+        .button {
+            background: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+            color: #000;
+            border: none;
+            padding: 6px 6px; /* Aumenta o tamanho do botão */
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* Remove a decoração padrão do link */
+            display: inline-block; /* Faz o link se comportar como um botão */
+            text-align: center; /* Centraliza o texto */
+        }
+        .button:hover {
+            background: rgba(255, 255, 255, 1); /* Fundo branco sólido ao passar o mouse */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao passar o mouse */
+        }
+        .error-message {
+            position: absolute;
+            top: 60%; /* Ajuste a posição vertical da mensagem de erro */
+            left: 50%;
+            transform: translateX(-50%); /* Centraliza horizontalmente */
+            background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para melhor legibilidade */
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .yoshi-gif {
+            position: absolute; /* Posiciona o GIF com base em coordenadas */
+            width: 120px; /* Ajuste o tamanho do GIF conforme necessário */
+            top: 92%; /* Ajuste a posição vertical */
+            left: 10%; /* Ajuste a posição horizontal */
+            z-index: 5; /* Garante que o GIF fique sobre os outros elementos */
+        }
+    </style>
+</head>
+<body>
+    <div class="error-message">
+        Erro 404 - Sorry princess, but mario is not here
+    </div>
+    <div class="link1">
+        <a href="result.html" class="button">Clique aqui</a>
+    </div>
+    <img src="imagens/yoshi_error.gif" alt="Yoshi Error" class="yoshi-gif"> <!-- Adiciona o GIF -->
+</body>
+</html>

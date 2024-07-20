@@ -1,9 +1,8 @@
 /* Definição da codificação UTF-8 */
 @charset "utf-8";
 
-/* Estilos para o corpo da página */
 body {
-    background-image: linear-gradient(to right, red, FireBrick, DarkRed);
+    background-image: linear-gradient(to top,orangered,darkorange, orange);
     font-family: 'Cooper Black', sans-serif;
     font-size: 20px;
     margin: 0;

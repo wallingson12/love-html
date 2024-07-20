@@ -2,50 +2,181 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Projec-crush</title>
+    <title>Quiz Romântico</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .quiz-container {
+            background-color: rgba(112, 71, 5, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .option {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ef9904;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #326a92;
+        }
+        .hidden {
+            display: none;
+        }
+        .textarea-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+        .submit-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ef9904;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #326a92;
+        }
+    </style>
 </head>
 <body>
-
-    <img src="love.jpg" alt="Imagem de amor" width="100" height="100">
-    <br>
-
-    <main>
-        <section class="intro">
-            <h1>Fulana</h1>
-            <p>Você é a variável constante do meu script...
-                Porque você não sai da minha cabeça<br>
-            Mensagem &#10084;&#65039;</p>
-        </section>
-    </main>
-
-    <!-- Quiz de HTML -->
     <div class="quiz-container">
-        <h2>Quer namorar comigo?</h2>
-        <form id="quizForm" action="resultado_quiz.html" method="get" onsubmit="return validarFormulario()">
-            <div class="question">
-                <label><input type="radio" name="q1" value="a"> Sim</label><br>
-                <label><input type="radio" name="q1" value="b"> Não</label><br>
+        <div id="quiz">
+            <div id="question-container">
+                <p id="question" class="question"></p>
+                <ul id="options" class="options"></ul>
             </div>
-            <button type="submit">Enviar Resposta</button>
-        </form>
+            <p id="message" class="hidden"></p>
+            <div id="textarea-container" class="textarea-container hidden">
+                <textarea id="response"></textarea>
+                <button id="submit-button" class="submit-button" onclick="submitResponse()">Enviar</button>
+            </div>
+        </div>
     </div>
-    
-    <footer>
-        <p>&copy; 2024 Nome</p>
-    </footer>
 
     <script>
-        function validarFormulario() {
-            const resposta = document.querySelector('input[name="q1"]:checked');
-            
-            if (resposta && resposta.value === 'a') {
-                return true; // Permite o envio do formulário
+        const questions = [
+            {
+                question: "Onde nos conhecemos?",
+                options: ["Cinema", "Praia", "Escola", "Trabalho"],
+                answer: "Praia"
+            },
+            {
+                question: "Qual é o seu filme favorito?",
+                options: ["Titanic", "Star Wars", "Rei leão", "Harry Potter"],
+                answer: "Rei leão"
+            },
+            {
+                question: "Qual é a minha cor favorita?",
+                options: ["Vermelho", "Verde", "Azul", "Preto"],
+                answer: "Vermelho"
+            },
+            {
+                question: "Qual é a minha série de TV favorita de todos os tempos?",
+                options: ["Breaking Bad", "Friends", "Stranger Things", "The Office"],
+                answer: "Friends"
+            },
+            {
+                question: "Escreva o que você sente neste momento:",
+                options: [],
+                answer: "" // O campo de resposta será preenchido pelo usuário
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+        const messageElement = document.getElementById('message');
+        const textareaContainer = document.getElementById('textarea-container');
+        const responseTextarea = document.getElementById('response');
+        const submitButton = document.getElementById('submit-button');
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            optionsElement.innerHTML = '';
+            if (currentQuestion.options.length > 0) {
+                currentQuestion.options.forEach(option => {
+                    const li = document.createElement('li');
+                    li.textContent = option;
+                    li.className = 'option';
+                    li.onclick = () => checkAnswer(option);
+                    optionsElement.appendChild(li);
+                });
+                textareaContainer.classList.add('hidden');
             } else {
-                alert('Que pena! Espero que possamos continuar amigos.');
-                return false; // Impede o envio do formulário
+                textareaContainer.classList.remove('hidden');
             }
         }
+
+        function checkAnswer(selectedOption) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (selectedOption === currentQuestion.answer) {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                } else {
+                    // Todas as respostas corretas, redirecionar para resultado_quiz.html
+                    window.location.href = "resultado_quiz.html";
+                }
+            } else {
+                messageElement.textContent = "Tente novamente!";
+                messageElement.classList.remove('hidden');
+            }
+        }
+
+        function submitResponse() {
+            const response = responseTextarea.value.trim();
+            if (response !== '') {
+                // Processar a resposta livre, se necessário
+                console.log("Resposta livre:", response);
+                // Avançar para a próxima pergunta
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                    responseTextarea.value = ''; // Limpar o campo de resposta
+                    messageElement.textContent = ''; // Limpar mensagem de erro, se houver
+                    messageElement.classList.add('hidden'); // Esconder mensagem de erro
+                } else {
+                    // Redirecionar para a página de resultado
+                    window.location.href = "request_main.html";
+                }
+            } else {
+                messageElement.textContent = "Por favor, preencha sua resposta.";
+                messageElement.classList.remove('hidden');
+            }
+        }
+
+        loadQuestion();
     </script>
 </body>
 </html>
