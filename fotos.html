@@ -55,7 +55,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
         }
 
         .photo-container {
@@ -95,12 +95,17 @@
 
         @media (max-width: 480px) {
             .photo-container {
-                width: 100px; /* Largura ainda menor para telas muito pequenas */
-                height: 100px; /* Altura ainda menor para telas muito pequenas */
+                width: calc(50% - 10px); /* Largura para exibir duas fotos por linha com espaçamento */
+                height: calc(50% - 10px) /* Ajusta a altura do contêiner para telas muito pequenas */
             }
             
             h1 {
                 font-size: 1.2rem; /* Ajusta o tamanho do texto do título para telas pequenas */
+            }
+            
+            main {
+                padding: 10px; /* Reduz o padding principal */
+                gap: 10px; /* Reduz o espaço entre as fotos */
             }
         }
     </style>
@@ -116,28 +121,22 @@
     </header>
     <main>
         <div class="photo-container">
-            <img src="imagens/foto1.png" alt="Descrição da foto 1">
-            <div class="photo-caption">Descrição da foto 1</div>
+            <img src="imagens/foto1.png" alt="">
         </div>
         <div class="photo-container">
-            <img src="imagens/foto2.png" alt="Descrição da foto 2">
-            <div class="photo-caption">Descrição da foto 2</div>
+            <img src="imagens/foto2.png" alt="">
         </div>
         <div class="photo-container">
-            <img src="imagens/foto3.png" alt="Descrição da foto 3">
-            <div class="photo-caption">Descrição da foto 3</div>
+            <img src="imagens/foto3.png" alt="">
         </div>
         <div class="photo-container">
-            <img src="imagens/foto4.png" alt="Descrição da foto 4">
-            <div class="photo-caption">Descrição da foto 4</div>
+            <img src="imagens/foto4.png" alt="">
         </div>
         <div class="photo-container">
-            <img src="imagens/foto5.png" alt="Descrição da foto 5">
-            <div class="photo-caption">Descrição da foto 5</div>
+            <img src="imagens/foto5.png" alt="">
         </div>
         <div class="photo-container">
-            <img src="imagens/foto6.png" alt="Descrição da foto 6">
-            <div class="photo-caption">Descrição da foto 6</div>
+            <img src="imagens/foto6.png" alt="">
         </div>
     </main>
 </body>

@@ -5,16 +5,80 @@
     <title>Quiz Romântico</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Configuração para desktop */
+        @media (min-width: 768px) {
+            .quiz-container {
+                background-color: rgba(112, 71, 5, 0.8);
+                padding: 40px; /* Ajuste o padding para desktops */
+                border-radius: 10px;
+                text-align: center;
+                max-width: 1200px;
+                width: 100%;
+                margin: 50px auto; /* Ajuste a margem para desktops */
+            }
+            .question {
+                font-size: 24px; /* Ajuste o tamanho da fonte para desktops */
+            }
+            .option {
+                font-size: 16px; /* Ajuste o tamanho da fonte para opções */
+            }
+            .textarea-container textarea {
+                font-size: 16px; /* Ajuste o tamanho da fonte para textarea */
+            }
+            .submit-button {
+                font-size: 16px; /* Ajuste o tamanho da fonte para o botão de enviar */
+            }
+        }
+
+        /* Configuração para celular */
+        @media (max-width: 767px) {
+            .quiz-container {
+                background-color: rgba(112, 71, 5, 0.8);
+                padding: 20px; /* Ajuste o padding para celulares */
+                border-radius: 10px;
+                text-align: center;
+                max-width: 90%;
+                width: 100%;
+                margin: 20px auto; /* Ajuste a margem para celulares */
+            }
+            .question {
+                font-size: 30px; /* Aumente o tamanho da fonte para celulares */
+            }
+            .option {
+                display: block;
+                font-size: 24px; /* Aumente o tamanho da fonte para opções */
+                padding: 15px 30px; /* Aumente o padding para opções */
+                margin: 10px 0; /* Ajuste a margem para opções */
+                width: 100%; /* Ajuste a largura das opções */
+            }
+            .textarea-container textarea {
+                font-size: 24px; /* Aumente o tamanho da fonte para textarea */
+                padding: 15px; /* Aumente o padding do textarea */
+            }
+            .submit-button {
+                font-size: 24px; /* Aumente o tamanho da fonte para o botão de enviar */
+                padding: 15px 30px; /* Aumente o padding do botão */
+            }
+        }
+
+        /* Estilos específicos do formulário de quiz */
         .quiz-container {
-            background-color: rgba(112, 71, 5, 0.8);
+            background-color: rgba(112, 71, 5, 0.8); /* Cor de fundo para quiz */
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            max-width: 600px;
+            max-width: 740px;
             width: 100%;
         }
         .question {
-            font-size: 24px;
+            font-size: 55px;
             margin-bottom: 20px;
         }
         .options {
@@ -30,7 +94,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 35px;
             transition: background-color 0.3s;
         }
         .option:hover {
@@ -47,7 +111,7 @@
             width: 80%;
             height: 100px;
             padding: 10px;
-            font-size: 16px;
+            font-size: 35px;
             border-radius: 5px;
             border: 1px solid #ccc;
             resize: none;
@@ -60,7 +124,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 35px;
             transition: background-color 0.3s;
         }
         .submit-button:hover {
