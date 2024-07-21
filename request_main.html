@@ -2,63 +2,90 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado do Quiz</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
         body {
             background-image: linear-gradient(to top, rgb(117, 7, 7), FireBrick, rgb(231, 68, 68));
             font-family: 'Cooper Black', sans-serif;
-            font-size: 1em;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white; /* Cor do texto */
+            color: white;
         }
         
         main {
             text-align: center;
-            margin-bottom: 1em;
         }
         
         .quiz-container {
-            background-color: rgba(207, 37, 37, 0.8); /* Fundo semi-transparente */
-            padding: 1em;
+            background-color: rgba(207, 37, 37, 0.8);
+            padding: 10px;
             border-radius: 16px;
             transition: background-color 0.3s;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        footer {
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px; /* Ajuste o padding conforme necessário */
+            font-size: 10px; /* Ajuste o tamanho do texto conforme necessário */
         }
         
-        footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.3em 0; /* Reduzindo o espaçamento interno */
-    font-size: 0.8em; /* Reduzindo o tamanho da fonte */
-}
-        
-        /* Estilo para o botão de enviar */
         button[type="submit"] {
             background-color: white;
             color: black;
             border: none;
-            padding: 0.5em 1em;
+            padding: 0.6em 1.2em;
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            font-size: 16px;
         }
         
         button[type="submit"]:hover {
-            background-color: #e33b3b; /* Cor de fundo ao passar o mouse */
+            background-color: #e33b3b;
         }
         
-        /* Estilo para as perguntas */
         .question {
             margin-bottom: 1em;
+        }
+
+        @media (max-width: 390px) and (max-height: 844px) {
+            body {
+                justify-content: flex-start;
+                padding-top: 10px;
+            }
+
+            .quiz-container {
+                font-size: 12px;
+                border-radius: 12px;
+                max-width: 70%;
+            }
+
+            button[type="submit"] {
+                padding: 0.6em 1.2em;
+                font-size: 14px;
+            }
+
+            footer {
+                padding: 1px; /* Ajuste o padding conforme necessário */
+                font-size: 10px; /* Ajuste o tamanho do texto conforme necessário */
+                margin-top: 60px;
+            }
         }
     </style>
 </head>
@@ -68,9 +95,7 @@
     <main>
         <section class="intro">
             <h1>Olá querida!</h1>
-            <p>Eu não sou de falar muito, então prefiro me expressar de outras maneiras...<br>
-            Como passar tempo criando algo, desenhando, escrevendo ou programando.<br>
-            Este mini site é uma forma de dizer...<br> 
+            <p>Eu não sou de falar muito, então prefiro me expressar de outras maneiras...</p>
             <p>Você é a variável constante do meu script! &#10084;&#65039;&#65039;</p>
         </section>
     </main>
