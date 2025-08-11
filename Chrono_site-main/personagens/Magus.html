@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magus - Fan-site de Jogo</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo geral do body */
+        body {
+            background-color: #d3d3d3; /* Fundo cinza claro */
+            color: #000; /* Texto preto para contraste com o fundo cinza */
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px; /* Tamanho da fonte para melhor legibilidade */
+            line-height: 1.6; /* Altura da linha ajustada */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4d4d4d;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 8px;
+            background: #f4f4f4;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin: 0;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+
+        article h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        article p {
+            margin: 0 0 1rem;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        th, td {
+            border: 2px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #888;
+            color: #fff;
+        }
+
+        td {
+            color: #555;
+        }
+
+        .img-personagem {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        article a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                font-size: 10px;
+            }
+
+            .img-personagem {
+                width: 150px;
+            }
+
+            table {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../imagens/logo.jpg" alt="Logo do Chrono Trigger">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../personagens.html">Personagens</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="magus" class="section">
+            <h2>Magus</h2>
+            <img src="../imagens/Magus.gif" alt="Magus" class="img-personagem">
+            <article>
+                <h3>Magus (Janus)</h3>
+                <p>Magus, cujo verdadeiro nome é Janus, era o irmão mais novo de Schala no próspero reino de Zea, por volta de 12.000 a.C.</p>
+                <p>Após a destruição do reino causada por Lavos, Janus foi lançado no passado e se transformou em Magus, um mago poderoso movido pela dor e desejo de vingança.</p>
+                <p>Com o objetivo de derrotar Lavos e vingar a perda de sua família, Magus começa como um antagonista. No entanto, sua história é marcada por conflitos internos e escolhas difíceis, e ele pode se tornar um aliado dos heróis, dependendo das ações do jogador.</p>
+                <h3>Técnicas Individuais</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>MP Usado</th>
+                            <th>Informações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Corte de Sombra</td>
+                            <td>3</td>
+                            <td>Causa dano de sombra a um inimigo.</td>
+                        </tr>
+                        <tr>
+                            <td>Corte de Fogo</td>
+                            <td>5</td>
+                            <td>Causa dano de fogo a um inimigo.</td>
+                        </tr>
+                        <tr>
+                            <td>Corte de Gelo</td>
+                            <td>5</td>
+                            <td>Causa dano de gelo a um inimigo.</td>
+                        </tr>
+                        <tr>
+                            <td>Chama Sombria</td>
+                            <td>7</td>
+                            <td>Causa dano de sombra a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Tempestade de Fogo</td>
+                            <td>8</td>
+                            <td>Causa dano de fogo a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Tornado Glacial</td>
+                            <td>8</td>
+                            <td>Causa dano de gelo a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Apocalipse</td>
+                            <td>10</td>
+                            <td>Causa dano massivo de sombra a todos os inimigos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Técnicas Duplas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>MP Usado</th>
+                            <th>Companheiro de Ataque</th>
+                            <th>Requisitos</th>
+                            <th>Informações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Corte de Sombra + Corte de Fogo</td>
+                            <td>8</td>
+                            <td>Frog</td>
+                            <td>Corte de Sombra + Corte de Fogo</td>
+                            <td>Combina dano de sombra e fogo para causar grande dano a um inimigo.</td>
+                        </tr>
+                        <tr>
+                            <td>Corte de Sombra + Corte de Gelo</td>
+                            <td>8</td>
+                            <td>Robo</td>
+                            <td>Corte de Sombra + Corte de Gelo</td>
+                            <td>Combina dano de sombra e gelo para causar grande dano a um inimigo.</td>
+                        </tr>
+                        <tr>
+                            <td>Chama Sombria + Tempestade de Fogo</td>
+                            <td>12</td>
+                            <td>Lucca</td>
+                            <td>Chama Sombria + Tempestade de Fogo</td>
+                            <td>Combina dano de sombra e fogo para causar dano massivo a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Chama Sombria + Tornado Glacial</td>
+                            <td>12</td>
+                            <td>Frog</td>
+                            <td>Chama Sombria + Tornado Glacial</td>
+                            <td>Combina dano de sombra e gelo para causar dano massivo a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Tempestade de Fogo + Tornado Glacial</td>
+                            <td>14</td>
+                            <td>Lucca</td>
+                            <td>Tempestade de Fogo + Tornado Glacial</td>
+                            <td>Combina dano de fogo e gelo para causar grande dano a todos os inimigos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

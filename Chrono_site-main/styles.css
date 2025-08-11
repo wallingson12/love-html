@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Reseta as margens e alturas padrão */
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Press Start 2P', cursive;
+            max-width: 100%; /* Evita rolagem horizontal */
+            overflow-x: hidden; /* Garante que nada saia da tela */
+        }
+
+        header {
+            width: 100%; /* Ajusta a largura para 100% da largura da viewport */
+            background-color: #333;
+            background-image: url('imagens/fundo_top.png'); /* Caminho para a imagem de fundo */
+            background-size: cover; /* Faz com que a imagem cubra todo o cabeçalho */
+            background-position: center; /* Centraliza a imagem no cabeçalho */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            color: #fff;
+            padding: 10px 20px; /* Ajuste o padding do cabeçalho */
+            text-align: center;
+            margin: 0;
+            height: 100%; /* Faz o cabeçalho ocupar toda a altura da tela */
+            box-sizing: border-box; /* Inclui o padding na altura total */
+            position: relative; /* Necessário para assegurar que a imagem de fundo seja posicionada corretamente */
+        }
+
+        nav {
+            display: flex; /* Usa Flexbox para o nav */
+            justify-content: center; /* Centraliza o conteúdo do nav */
+            margin: 0; /* Remove a margem abaixo do nav para reduzir a distância */
+            padding: 20px 0; /* Ajuste o padding conforme necessário */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Remove a margem padrão do ul */
+            display: flex; /* Usa Flexbox para os itens da lista */
+        }
+
+        nav ul li {
+            margin: 0 5px; /* Ajusta a margem entre os itens do menu */
+        }
+
+        nav a {
+            color: white;
+            background-color: black;
+            text-decoration: none;
+            padding: 15px 30px; /* Aumenta o padding dos links de navegação */
+            font-size: 18px; /* Aumenta o tamanho da fonte dos links */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        main {
+            background: linear-gradient(to bottom, #FFFFFF, #D3D3D3, #A9A9A9, #696969, #2F4F4F); /* Aplicando o degradê */
+            padding: 2rem;
+            text-align: center; /* Centraliza o texto dentro do main */
+            flex: 1; /* Faz com que o main ocupe o restante do espaço */
+        }
+
+        .section {
+            background: linear-gradient(to bottom, #FFFFFF, #D3D3D3, #A9A9A9, #696969, #2F4F4F); /* Aplicando o degradê */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 10px; /* Adiciona espaço entre as imagens */
+            flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte */
+            justify-content: center; /* Centraliza as imagens no contêiner */
+        }
+
+        .section h2 {
+            width: 100%; /* Faz o título ocupar toda a largura disponível */
+            margin-top: 0;
+        }
+
+        .character-img {
+            width: 180px; /* Define a largura das imagens */
+            height: 180px; /* Define a altura das imagens */
+            max-width: 100%; /* Corrigido: adicionado ponto e vírgula */
+            object-fit: cover; /* Faz com que a imagem cubra a área sem distorcer */
+            margin: 10px; /* Adiciona margem entre as imagens */
+            border-radius: 8px; /* Adiciona bordas arredondadas, se desejado */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adiciona uma sombra para efeito */
+        }
+
+        img.img-personagem {
+            background-color: white;
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0; /* Ajusta o padding do footer */
+        }
+    </style>
+</head>

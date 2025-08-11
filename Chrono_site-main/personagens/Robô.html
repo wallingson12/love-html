@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo - Fan-site de Jogo</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo geral do body */
+        body {
+            background-color: #d3d3d3;
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4d4d4d;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 8px;
+            background: #f4f4f4;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin: 0;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+
+        article h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        article p {
+            margin: 0 0 1rem;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        th, td {
+            border: 2px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #888;
+            color: #fff;
+        }
+
+        td {
+            color: #555;
+        }
+
+        .img-personagem {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        article a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../imagens/logo.jpg" alt="Logo do Chrono Trigger">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../personagens.html">Personagens</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="robo">
+            <h2>Robô</h2>
+            <img src="../imagens/Robô.gif" alt="Robo do jogo Chrono Trigger" class="img-personagem">
+            <article>
+                <h2>Descrição do Personagem</h2>
+                <p>
+                    <strong>Robo</strong> é um dos personagens mais intrigantes de <em>Chrono Trigger</em>, um robô de um futuro distante criado para servir a humanidade. Sua história vai além de ser apenas uma máquina, começando com ele encontrado em estado deteriorado e sendo ativado como um aliado valioso para o grupo de heróis.
+                </p>
+                <p>
+                    Com um forte senso de dever e um desejo de proteger seus amigos, Robo desenvolve uma personalidade própria, refletindo coragem e amizade.
+                </p>
+                <p>
+                    Mesmo sendo provével que caso derrotem lavos, isso poderia evitar sua existência pós 1999 d.c. <br>
+                </p>
+
+                <h2>Técnicas Individuais</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>MP Usado</th>
+                            <th>Informações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cura</td>
+                            <td>2</td>
+                            <td>Recupera HP de um aliado.</td>
+                        </tr>
+                        <tr>
+                            <td>Cura 2</td>
+                            <td>6</td>
+                            <td>Recupera HP de todos os aliados.</td>
+                        </tr>
+                        <tr>
+                            <td>Cura 3</td>
+                            <td>12</td>
+                            <td>Recupera uma grande quantidade de HP de todos os aliados.</td>
+                        </tr>
+                        <tr>
+                            <td>Explosão</td>
+                            <td>5</td>
+                            <td>Causa dano de energia a um inimigo.</td>
+                        </tr>
+                        <tr>
+                            <td>Laser</td>
+                            <td>8</td>
+                            <td>Causa dano de energia a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Ciclone</td>
+                            <td>10</td>
+                            <td>Causa dano de vento a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Invasão</td>
+                            <td>15</td>
+                            <td>Um ataque que causa dano massivo a todos os inimigos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Técnicas Duplas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>MP Usado</th>
+                            <th>Companheiro de Ataque</th>
+                            <th>Requisitos</th>
+                            <th>Informações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cura + Cura 2</td>
+                            <td>8</td>
+                            <td>Marle</td>
+                            <td>Cura + Cura 2</td>
+                            <td>Recupera HP de todos os aliados e cura uma grande quantidade de HP.</td>
+                        </tr>
+                        <tr>
+                            <td>Explosão + Laser</td>
+                            <td>12</td>
+                            <td>Lucca</td>
+                            <td>Explosão + Laser</td>
+                            <td>Combina ataques de energia para causar grande dano.</td>
+                        </tr>
+                        <tr>
+                            <td>Ciclone + Explosão</td>
+                            <td>15</td>
+                            <td>Lucca</td>
+                            <td>Ciclone + Explosão</td>
+                            <td>Combina vento e energia para causar dano massivo a todos os inimigos.</td>
+                        </tr>
+                        <tr>
+                            <td>Laser + Cura 3</td>
+                            <td>20</td>
+                            <td>Marle</td>
+                            <td>Laser + Cura 3</td>
+                            <td>Combina ataque de energia com cura massiva para todos os aliados.</td>
+                        </tr>
+                        <tr>
+                            <td>Invasão + Ciclone</td>
+                            <td>25</td>
+                            <td>Lucca</td>
+                            <td>Invasão + Ciclone</td>
+                            <td>Um poderoso ataque combinado de vento e energia que causa dano massivo a todos os inimigos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
