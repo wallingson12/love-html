@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projec-crush - Resultado Positivo</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilo do cabeçalho */
+        header {
+            width: 100%;
+            background-color: red; /* Fundo vermelho para o cabeçalho */
+            padding: 1px 0;
+            position: fixed; /* Fixa a barra no topo */
+            top: 0;
+            z-index: 1000; /* Garante que o cabeçalho esteja sobre outros conteúdos */
+        }
+
+        /* Estilo dos links de navegação */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            background-color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Estilo do corpo */
+        body {
+            background-color: red; /* Fundo vermelho */
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding-top: 60px; /* Espaço para o cabeçalho fixo */
+        }
+
+        /* Estilo do conteúdo principal */
+        main {
+            text-align: center;
+        }
+
+        /* Estilo do contêiner de comemoração */
+        .celebration-container {
+            background-color: #ff4d4d; /* Cor de fundo para destacar a comemoração */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Estilo do título */
+        h1 {
+            margin: 0;
+            color: #FFD700; /* Dourado para o título */
+            font-size: 2.5rem;
+        }
+
+        /* Estilo dos parágrafos */
+        p {
+            color: #FFFFFF; /* Branco para o texto */
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        /* Estilo do botão */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #1E90FF; /* Azul claro para o botão */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #00BFFF; /* Azul mais claro para o botão ao passar o mouse */
+        }
+
+        /* Consultas de mídia para responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Reduz o tamanho do título em telas menores */
+            }
+
+            p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto dos parágrafos em telas menores */
+            }
+
+            .btn {
+                padding: 8px 16px; /* Ajusta o padding do botão em telas menores */
+                font-size: 0.9rem; /* Ajusta o tamanho da fonte do botão em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Reduz ainda mais o tamanho do título em telas muito pequenas */
+            }
+
+            p {
+                font-size: 1rem; /* Reduz ainda mais o tamanho do texto dos parágrafos em telas muito pequenas */
+            }
+
+            .btn {
+                padding: 6px 12px; /* Ajusta ainda mais o padding do botão */
+                font-size: 0.8rem; /* Ajusta o tamanho da fonte do botão em telas muito pequenas */
+            }
+
+            img {
+                width: 200px; /* Ajusta a largura da imagem em telas pequenas */
+                height: auto; /* Mantém a proporção da imagem */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="recados.html">Recados</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="celebration-container">
+            <h1>🎉🎉🎉</h1>
+            <p>Como assim?<br>
+               Aceitou!<br>
+               Nunca cheguei nessa fase🤣</p>
+            <img src="imagens/yes.gif" alt="Imagem de confirmação de aceitação" width="250" height="200">
+            <br>
+            <a href="index.html" class="btn">Voltar à Página Inicial</a>
+        </div>
+    </main>
+</body>
+</html>
