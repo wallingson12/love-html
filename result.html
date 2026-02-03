@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-crush — Resultado 💖</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Fonte romântica -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================
+           BODY (coerente com style.css)
+        ============================ */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #ff4d6d, #ff6b81, #ff8fa3);
+            font-family: 'Cooper Black', sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ============================
+           HEADER (MAIOR + CLEAN)
+        ============================ */
+        header {
+            width: 100%;
+            background: linear-gradient(to right, #ff4d6d, #ff6b81);
+            padding: 28px 0;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            background-color: white;
+            color: #b3001b;
+            text-decoration: none;
+            padding: 16px 44px;
+            border-radius: 14px;
+            font-size: 1.35rem;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.25s ease, background-color 0.25s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6b81;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ============================
+           MAIN
+        ============================ */
+        main {
+            margin-top: 140px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ============================
+           CONTAINER PRINCIPAL
+        ============================ */
+        .celebration-container {
+            background-color: rgba(255,255,255,0.96);
+            border-radius: 18px;
+            padding: 36px;
+            width: 90%;
+            max-width: 680px;
+            text-align: center;
+            color: #b3001b;
+
+            box-shadow: 0 6px 18px rgba(145, 15, 60, 0.35);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* ============================
+           TÍTULO + EMOJIS
+        ============================ */
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            margin: 0 0 10px;
+        }
+
+        h1 span {
+            display: inline-block;
+            animation: bounce 1s ease-in-out infinite alternate;
+        }
+
+        h1 span:nth-child(2) { animation-delay: .2s; }
+        h1 span:nth-child(3) { animation-delay: .4s; }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        /* ============================
+           TEXTO
+        ============================ */
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin: 20px 0;
+            color: #000;
+        }
+
+        /* ============================
+           IMAGEM / GIF
+        ============================ */
+        img {
+            width: 280px;
+            max-width: 90%;
+            margin-top: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        /* ============================
+           BOTÃO
+        ============================ */
+        .btn {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 32px;
+            background-color: #ff4d6d;
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+            transition: transform .25s ease, background-color .25s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff6b81;
+            transform: scale(1.06);
+        }
+
+        /* ============================
+           CONFETES (SUAVE)
+        ============================ */
+        .confetti {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: .8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from { transform: translateY(-10vh) rotate(0deg); }
+            to   { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        /* ============================
+           ANIMAÇÃO FADE
+        ============================ */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ============================
+           RESPONSIVO
+        ============================ */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.4rem; }
+            p  { font-size: 1.3rem; }
+            nav a { font-size: 1.1rem; padding: 14px 30px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="recados.html">Recados</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="celebration-container">
+        <h1>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+        </h1>
+
+        <p>
+            Como assim?<br>
+            Aceitou!<br>
+            Nunca cheguei nessa fase 🤣
+        </p>
+
+        <img src="imagens/yes.gif" alt="Confirmação">
+
+        <br>
+        <a href="index.html" class="btn">Voltar à Página Inicial</a>
+    </div>
+</main>
+
+<script>
+    const colors = ["#FFD700", "#FF69B4", "#00BFFF", "#7CFC00", "#FF4500"];
+    for (let i = 0; i < 40; i++) {
+        const c = document.createElement("div");
+        c.className = "confetti";
+        c.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+        c.style.left = Math.random()*100 + "vw";
+        c.style.animationDuration = 3 + Math.random()*3 + "s";
+        document.body.appendChild(c);
+    }
+</script>
+
+</body>
+</html>

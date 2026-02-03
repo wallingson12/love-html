@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultado do Quiz</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* =========================
+       BODY CENTRALIZADO
+    ========================= */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: linear-gradient(to top, #ff4d6d, #ff6b81, #ff8fa3);
+    }
+
+    /* =========================
+       CONTAINER
+    ========================= */
+    .container {
+        background-color: rgba(255, 255, 255, 0.98);
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* =========================
+       CORAÇÕES FLUTUANTES
+    ========================= */
+    .container::before,
+    .container::after {
+        content: "❤️";
+        position: absolute;
+        font-size: 3rem;
+        opacity: 0.15;
+        animation: floatHearts 4s infinite ease-in-out alternate;
+    }
+
+    .container::before { top: -10px; left: -10px; }
+    .container::after { bottom: -10px; right: -10px; }
+
+    @keyframes floatHearts {
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(15deg); }
+        100% { transform: translateY(0) rotate(-10deg); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+    .container img {
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 3px solid #ff4d6d;
+    }
+
+    .container h1 {
+        color: #b3001b;
+        margin-bottom: 10px;
+        font-size: 2.2rem;
+    }
+
+    .container p {
+        font-size: 1.6rem;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    .container h2 {
+        color: #b3001b;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    label {
+        display: block;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        cursor: pointer;
+        color: #333;
+    }
+
+    button {
+        background-color: #ff4d6d;
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #ff6b81;
+        transform: scale(1.05);
+    }
+
+    #feedback {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        min-height: 50px;
+        color: #b3001b;
+    }
+
+    .success { color: green; font-weight: bold; }
+    .failure { color: #b3001b; font-weight: bold; }
+
+    @media (max-width: 480px) {
+        .container p, label, button {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img src="imagens/love.jpg" alt="Coração" width="100" height="100">
+
+    <h1>Olá querida!</h1>
+    <p>Você é a variável constante do meu script!</p>
+    <p>❤️</p>
+
+    <h2>Quer namorar comigo?</h2>
+    <form id="quizForm" onsubmit="return validarFormulario()">
+        <div class="question">
+            <label><input type="radio" name="q1" value="a"> Sim</label>
+            <label><input type="radio" name="q1" value="b"> Não</label>
+        </div>
+        <button type="submit">Enviar Resposta</button>
+    </form>
+
+    <div id="feedback" class="feedback-container"></div>
+</div>
+
+<script>
+function validarFormulario() {
+    const resposta = document.querySelector('input[name="q1"]:checked');
+    const feedback = document.getElementById('feedback');
+
+    if (!resposta) {
+        feedback.textContent = "Escolha uma opção antes de enviar.";
+        feedback.className = "failure";
+        feedback.style.display = "block";
+        return false;
+    }
+
+    if (resposta.value === 'a') {
+        feedback.textContent = "Error 404 💔";
+        feedback.className = "success";
+        feedback.style.display = "block";
+
+        setTimeout(() => {
+            window.location.href = "erro.html";
+        }, 1500);
+        return false;
+    } else {
+        // Feedback melhorado para negativa
+        feedback.innerHTML = "Ahh... que pena! 😢<br>Mesmo assim, você continua sendo incrível e especial para mim! 💖";
+        feedback.className = "failure";
+        feedback.style.display = "block";
+        return false;
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="container">
+        <div class="poem login-container">
+            <h1>Bem-vinda 💖</h1>
+
+            <form id="loginForm" class="login-form">
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Nome de usuário"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Senha"
+                    required
+                >
+
+                <button type="button" class="btn" onclick="authenticate()">
+                    Entrar
+                </button>
+
+                <p id="loginMessage" class="login-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function authenticate() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loginMessage = document.getElementById('loginMessage');
+
+            if (username === "usuario" && password === "senha") {
+                window.location.href = "quiz.html";
+            } else {
+                loginMessage.textContent = "Credenciais inválidas. Tente novamente.";
+                loginMessage.style.color = "darkred";
+            }
+        }
+    </script>
+
+</body>
+</html>

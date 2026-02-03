@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erro 404 - Página Não Encontrada</title>
+<style>
+    /* =========================
+       CONFIGURAÇÃO GERAL
+    ========================= */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        position: relative;
+    }
+
+    /* =========================
+       CONFIGURAÇÃO MOBILE
+    ========================= */
+    @media (max-width: 768px) {
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('imagens/caminho_secreto_cell.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .button {
+            position: absolute;
+            top: 35%;
+            left: 12%;
+            background: rgba(255, 255, 255, 0.8);
+            color: #000;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .error-message {
+            position: absolute;
+            width: 90%;
+            top: 49%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .yoshi-gif {
+            position: absolute;
+            width: 100px;
+            top: 14%;
+            left: 10%;
+            z-index: 5;
+            animation: floatYoshi 2s ease-in-out infinite;
+        }
+    }
+
+    /* =========================
+       CONFIGURAÇÃO PC
+    ========================= */
+    @media (min-width: 769px) {
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('imagens/caminho_secreto.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 60vh;
+        }
+
+        .button {
+            position: absolute;
+            top: 30%;
+            left: 13%;
+            background: rgba(255, 255, 255, 0.8);
+            color: #000;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .error-message {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .yoshi-gif {
+            position: absolute;
+            width: 120px;
+            top: 110%;
+            left: 10%;
+            z-index: 5;
+            animation: floatYoshi 2s ease-in-out infinite;
+        }
+    }
+
+    /* =========================
+       ANIMAÇÃO YOSHI
+    ========================= */
+    @keyframes floatYoshi {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+    <div class="error-message">
+        Erro 404 - Sorry princess, but Mario is not here
+    </div>
+
+    <a href="result.html" class="button">Clique aqui</a>
+
+    <img src="imagens/yoshi_error.gif" alt="Yoshi Error" class="yoshi-gif">
+</body>
+</html>

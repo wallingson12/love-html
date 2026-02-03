@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Romântico</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #ff4d6d, #ff6b81, #ff8fa3);
+        }
+
+        .quiz-container {
+            background-color: rgba(255, 255, 255, 0.96); /* fundo igual aos poemas */
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 740px;
+            width: 100%;
+        }
+
+        .question {
+            font-size: 35px;
+            margin-bottom: 30px;
+            color: darkred; /* vermelho escuro */
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .option {
+            display: block;
+            padding: 15px 30px;
+            margin: 10px 0;
+            background-color: #ff4d6d; /* rosa principal */
+            color: #fff; /* texto branco */
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 25px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .option:hover {
+            background-color: #ff6b81; /* rosa mais escuro no hover */
+            transform: scale(1.05);
+        }
+
+        #message {
+            color: darkred;
+            font-size: 20px;
+            margin-top: 15px;
+            min-height: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 20px;
+            }
+            .question {
+                font-size: 28px;
+            }
+            .option {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .question {
+                font-size: 22px;
+            }
+            .option {
+                font-size: 18px;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <p id="question" class="question"></p>
+        <ul id="options" class="options"></ul>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const questions = [
+            { question: "Onde nos conhecemos?", options: ["Cinema", "Praia", "Escola", "Trabalho"], answer: "Praia" },
+            { question: "Qual é o seu filme favorito?", options: ["Titanic", "Star Wars", "Rei leão", "Harry Potter"], answer: "Rei leão" },
+            { question: "Qual é a minha cor favorita?", options: ["Vermelho", "Verde", "Azul", "Preto"], answer: "Vermelho" },
+            { question: "Qual é a minha série de TV favorita?", options: ["Breaking Bad", "Friends", "Stranger Things", "The Office"], answer: "Friends" }
+        ];
+
+        let currentQuestionIndex = 0;
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+        const messageElement = document.getElementById('message');
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            optionsElement.innerHTML = '';
+            messageElement.textContent = '';
+
+            currentQuestion.options.forEach(option => {
+                const li = document.createElement('li');
+                li.textContent = option;
+                li.className = 'option';
+                li.onclick = () => checkAnswer(option);
+                optionsElement.appendChild(li);
+            });
+        }
+
+        function checkAnswer(selectedOption) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (selectedOption === currentQuestion.answer) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                } else {
+                    // redirecionamento correto para o arquivo request_main.html
+                    window.location.href = "./request_main.html";
+                }
+            } else {
+                messageElement.textContent = "Tente novamente!";
+            }
+        }
+
+        // Carrega a primeira questão
+        loadQuestion();
+    </script>
+</body>
+</html>

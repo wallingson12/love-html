@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/* ============================
+   RESET BÁSICO
+============================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   BODY GLOBAL
+============================ */
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #ff4d6d, #ff6b81, #ff8fa3);
+    font-family: 'Cooper Black', sans-serif;
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ============================
+   BODY LOGIN (CENTRAL REAL)
+============================ */
+body.login-page {
+    display: flex;               /* ativa flex */
+    flex-direction: column;      /* coluna */
+    justify-content: center;     /* central vertical */
+    align-items: center;         /* central horizontal */
+    min-height: 100vh;           /* garante altura total da tela */
+}
+
+/* ============================
+   HEADER / NAV
+============================ */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: linear-gradient(to right, #ff4d6d, #ff6b81);
+    padding: 26px 0;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    background-color: #fff;
+    color: #b3001b;
+    text-decoration: none;
+
+    padding: 16px 44px;
+    border-radius: 14px;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+nav a:hover {
+    background-color: #ff6b81;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ============================
+   CONTAINER PADRÃO
+============================ */
+.container {
+    width: 90%;
+    max-width: 720px;
+}
+
+/* ============================
+   TÍTULOS
+============================ */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: darkred;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ============================
+   TEXTO PADRÃO
+============================ */
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* ============================
+   POEMAS / CARDS
+============================ */
+.poem {
+    background-color: rgba(255,255,255,0.96);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    position: relative;
+
+    box-shadow: 0 6px 18px rgba(145, 15, 60, 0.35);
+    animation: fadeIn 0.6s ease-in-out;
+
+    transition: 0.25s;
+}
+
+.poem:hover {
+    transform: scale(1.03);
+    background-color: #fff0f3;
+}
+
+.poem::before,
+.poem::after {
+    content: "❤";
+    position: absolute;
+    font-size: 2.6rem;
+    color: #ff4d6d;
+}
+
+.poem::before {
+    top: 15px;
+    left: 15px;
+}
+
+.poem::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+.poem p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
+    color: #000;
+    text-align: center;
+}
+
+/* ============================
+   LOGIN
+============================ */
+.login-container {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+
+    border-radius: 12px;
+    border: 1px solid #ff6b81;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #ff4d6d;
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.5);
+}
+
+/* ============================
+   BOTÕES
+============================ */
+.btn {
+    width: 100%;
+    padding: 14px 30px;
+
+    background-color: #ff4d6d;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+.login-message {
+    min-height: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ============================
+   GALERIA DE FOTOS
+============================ */
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-container {
+    width: 220px;
+    height: 220px;
+
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 16px rgba(145, 15, 60, 0.35);
+    transition: 0.25s;
+}
+
+.photo-container:hover {
+    transform: scale(1.05);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================
+   ANIMAÇÃO
+============================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+@media (max-width: 768px) {
+    nav a {
+        padding: 14px 32px;
+        font-size: 1.2rem;
+    }
+
+    .photo-container {
+        width: 160px;
+        height: 160px;
+    }
+
+    .poem p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 12px 26px;
+        font-size: 1.1rem;
+    }
+
+    .photo-container {
+        width: calc(50% - 10px);
+        height: 160px;
+    }
+
+    .poem {
+        padding: 30px;
+    }
+
+    .poem p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Fundo do quiz */
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.96); /* mesmo fundo dos poemas */
+}
+
+/* Pergunta */
+.quiz-container .question {
+    color: darkred; /* título da pergunta */
+}
+
+/* Botões das opções */
+.quiz-container .option {
+    background-color: #ff4d6d; /* rosa principal */
+    color: #fff; /* texto branco */
+}
+
+.quiz-container .option:hover {
+    background-color: #ff6b81; /* rosa escuro no hover */
+}
+
+/* Botão de enviar (se aparecer textarea) */
+.quiz-container .submit-button {
+    background-color: #ff4d6d;
+    color: #fff;
+}
+
+.quiz-container .submit-button:hover {
+    background-color: #ff6b81;
+}
