@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiz Romântico</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
             margin: 0;
@@ -125,8 +125,8 @@
                 if (currentQuestionIndex < questions.length) {
                     loadQuestion();
                 } else {
-                    // redirecionamento correto para o arquivo request_main.html
-                    window.location.href = "./request_main.html";
+                    // redirecionamento correto para o arquivo templates/request_main.html
+                    window.location.href = "request_main.html";
                 }
             } else {
                 messageElement.textContent = "Tente novamente!";
