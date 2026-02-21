@@ -20,6 +20,4 @@ git clone https://github.com/wallingson12/love-html.git
 
 cd love-html-main
 
-2. Abra o site no navegador:
-
-Clique em templates/index.html
+2. Run node main.js
