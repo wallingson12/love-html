@@ -17,6 +17,7 @@ Um mini site criado para expressar sentimentos de forma criativa, utilizando **H
 1. Clone o repositório:
 
 git clone https://github.com/wallingson12/love-html.git
+
 cd love-html-main
 
 2. Abra o site no navegador:
