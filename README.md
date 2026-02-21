@@ -1,4 +1,4 @@
-# 💖 Projec-crush
+# 💖 Project-crush
 
 Um mini site criado para expressar sentimentos de forma criativa, utilizando **HTML**, **CSS** e **JavaScript**.
 
